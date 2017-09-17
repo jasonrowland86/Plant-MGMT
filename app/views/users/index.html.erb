@@ -1,1 +1,20 @@
-<h1>Index!</h1>
+<div class="container">
+  <div class="user-content">
+    <div>
+      <div>
+        Calendar
+      </div>
+      <div>
+        Plants List
+        <% @plants.each do |plant| %>
+          <div class="plant">
+            <%= link_to plant.name, plant_path(plant) %>
+          </div>
+        <% end %>
+        <br>
+
+        <%= link_to 'Add New Plant', new_plant_path %>
+      </div>
+    </div>
+  </div>
+</div>
