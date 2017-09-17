@@ -1,7 +1,15 @@
 class UsersController < ApplicationController
 
   def index
-    @user_count = User.count
+    if current_user
+      @plants = current_user.plants
+    elsif
+      redirect_to root_path
+    end
+  end
+
+  def show
+    @user = User.findby(params[:id])
   end
 
   def new
@@ -28,5 +36,5 @@ class UsersController < ApplicationController
   def create_params
     params.require(:user).permit(:username, :password)
   end
-  
+
 end
