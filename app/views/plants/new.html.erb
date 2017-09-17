@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="user-content">
+    <h2>Add a Plant</h2>
+
+    <%= form_for @plant do |f| %>
+      <%= f.text_field :name, placeholder: "name" %>
+      <%= f.text_field :category, placeholder: "category" %>
+      <%= f.text_field :size, placeholder: "size" %>
+      <%= f.text_field :condition, placeholder: "condition" %>
+      <%= f.submit 'Add' %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<h2> <%= @plant.name %> </h2>
+
+<p><i> <%= @plant.category %> </i></p>
+
+<br>
+<%= button_to 'delete plant', plant_path(@plant), method: :delete %>
+
+<%= link_to 'all plants', plants_path %>
