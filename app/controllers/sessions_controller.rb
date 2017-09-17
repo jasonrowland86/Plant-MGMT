@@ -1,4 +1,10 @@
 class SessionsController < ApplicationController
+  def index
+    if current_user
+      redirect_to users_path
+    end
+  end
+
   def new
     @user = User.new
   end
@@ -11,10 +17,10 @@ class SessionsController < ApplicationController
 
     if user
       sign_in(user)
-      flash[:notice] = 'you signed in'
+      flash[:notice] = 'Signed in'
       redirect_to users_path
     else
-      flash[:error] = 'username or password incorrect'
+      flash[:error] = 'Username or password incorrect'
       @user = User.new(username: username)
       render :new
     end
@@ -22,8 +28,8 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    flash[:notice] = 'i hate to see you go but i love watching you walk away ;)'
-    redirect_to users_path
+    flash[:notice] = 'You are signed out'
+    redirect_to root_path
   end
 
   private
