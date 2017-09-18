@@ -20,14 +20,8 @@
 
   <body>
 
-    <div class="notice">
-      <%= flash[:notice] %>
-    </div>
-    <div class="error">
-      <%= flash[:error] %>
-    </div>
-
     <%= render "partials/nav" %>
+    <%= render "partials/flashMessages" %>
     <%= yield %>
     <%= render "partials/footer" %>
 
