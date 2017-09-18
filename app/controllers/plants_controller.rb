@@ -2,7 +2,13 @@ class PlantsController < ApplicationController
   before_action :ensure_logged_in
 
   def index
-    
+    plants = current_user.plants
+    wetPlants = plants.select { |plant| plant.category == 'Heavy' }
+    @wetCount = wetPlants.count
+    mediumPlants = plants.select { |plant| plant.category == 'Medium' }
+    @mediumCount = mediumPlants.count
+    dryPlants = plants.select { |plant| plant.category == 'Light' }
+    @dryCount = dryPlants.count
   end
 
   def show
@@ -10,6 +16,9 @@ class PlantsController < ApplicationController
   end
 
   def new
+    @categories = ['Light', 'Medium','Heavy']
+    @sizes = ['Small', 'Medium', 'Large']
+    @conditions = ['Poor', 'Ok', 'Healthy']
     @plant = Plant.new
   end
 
@@ -18,7 +27,7 @@ class PlantsController < ApplicationController
     @plant.user = current_user
 
     if @plant.save
-      flash[:notice] = 'Added plant'
+      flash[:notice] = 'Added Plant'
       redirect_to users_path
     else
       flash[:error] = @plant.errors.full_messages.join(', ')
@@ -29,8 +38,23 @@ class PlantsController < ApplicationController
   def destroy
     plant = current_user.plants.find(params[:id])
     plant.destroy!
-    flash[:notice] = "#{plant.name} removed!"
-    redirect_to users_path
+    flash[:notice] = "#{plant.name} deleted"
+    redirect_to plants_path
+  end
+
+  def dry
+    plants = current_user.plants
+    @plants = plants.select { |plant| plant.category == 'Light' }
+  end
+
+  def medium
+    plants = current_user.plants
+    @plants = plants.select { |plant| plant.category == 'Medium' }
+  end
+
+  def wet
+    plants = current_user.plants
+    @plants = plants.select { |plant| plant.category == 'Heavy' }
   end
 
   private
