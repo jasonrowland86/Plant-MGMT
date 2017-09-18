@@ -3,10 +3,23 @@
     <h2>Add a Plant</h2>
 
     <%= form_for @plant do |f| %>
+      <%= f.label("Plant Name") %>
+      <br>
       <%= f.text_field :name, placeholder: "name" %>
-      <%= f.text_field :category, placeholder: "category" %>
-      <%= f.text_field :size, placeholder: "size" %>
-      <%= f.text_field :condition, placeholder: "condition" %>
+      <br>
+      <%= f.label("Water Level") %>
+      <br>
+      <%= f.select :category, options_for_select(@categories), include_blank: true %>
+      <br>
+      <%= f.label("Size") %>
+      <br>
+      <%= f.select :size, options_for_select(@sizes), include_blank: true %>
+      <br>
+      <%= f.label("Condition") %>
+      <br>
+      <%= f.select :condition, options_for_select(@conditions), include_blank: true %>
+      <br>
+      <br>
       <%= f.submit 'Add' %>
     <% end %>
   </div>

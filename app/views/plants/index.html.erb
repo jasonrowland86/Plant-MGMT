@@ -1,5 +1,21 @@
 <div class="container">
   <div class="intro-message">
-    This section will contain plant care infor, how to select a watering cycle, etc...
+    <div>
+      <h2>Plants By Type</h2>
+      <div>
+        <%= link_to 'Moisture Loving', plants_wet_path %>
+        <%= @wetCount %>
+      </div>
+      <div>
+        <%= link_to 'Evenly Moist', plants_medium_path %>
+        <%= @mediumCount %>
+      </div>
+      <div>
+        <%= link_to 'Dry Adapted', plants_dry_path %>
+        <%= @dryCount %>
+      </div>
+      <br>
+      <%= link_to 'Add New Plant', new_plant_path %>
+    </div>
   </div>
 </div>
