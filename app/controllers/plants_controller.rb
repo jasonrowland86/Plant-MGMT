@@ -3,12 +3,12 @@ class PlantsController < ApplicationController
 
   def index
     plants = current_user.plants
-    wetPlants = plants.select { |plant| plant.category == 'Heavy' }
-    @wetCount = wetPlants.count
-    mediumPlants = plants.select { |plant| plant.category == 'Medium' }
-    @mediumCount = mediumPlants.count
-    dryPlants = plants.select { |plant| plant.category == 'Light' }
+    dryPlants = current_user.plants.where(category: 'Dry')
+    moderatePlants = current_user.plants.where(category: 'Moderate')
+    wetPlants = current_user.plants.where(category: 'Wet')
     @dryCount = dryPlants.count
+    @moderateCount = moderatePlants.count
+    @wetCount = wetPlants.count
   end
 
   def show
@@ -16,7 +16,7 @@ class PlantsController < ApplicationController
   end
 
   def new
-    @categories = ['Light', 'Medium','Heavy']
+    @categories = ['Dry', 'Moderate','Wet']
     @sizes = ['Small', 'Medium', 'Large']
     @conditions = ['Poor', 'Ok', 'Healthy']
     @plant = Plant.new
@@ -55,6 +55,16 @@ class PlantsController < ApplicationController
   def wet
     plants = current_user.plants
     @plants = plants.select { |plant| plant.category == 'Heavy' }
+  end
+
+  def dashboard
+    plants = current_user.plants
+    dryPlants = current_user.plants.where(category: 'Dry')
+    moderatePlants = current_user.plants.where(category: 'Moderate')
+    wetPlants = current_user.plants.where(category: 'Wet')
+    @dryCount = dryPlants.count
+    @moderateCount = moderatePlants.count
+    @wetCount = wetPlants.count
   end
 
   private

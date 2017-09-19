@@ -1,15 +1,12 @@
 class UsersController < ApplicationController
 
   def index
-    if current_user
-      @plants = current_user.plants
-    elsif
-      redirect_to root_path
-    end
+    @user = User.find_by(username: current_user.username)
   end
 
   def show
-    @user = User.findby(params[:id])
+    # @user = User.findby(params[:id])
+    @user = current_user
   end
 
   def new
@@ -21,7 +18,7 @@ class UsersController < ApplicationController
 
     if user.save
       sign_in(user)
-      flash[:notice] = 'you signed in i think i love you'
+      flash[:notice] = 'Logged in'
       redirect_to users_path
     else
       errors = user.errors.full_messages
