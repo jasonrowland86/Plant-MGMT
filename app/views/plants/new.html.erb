@@ -1,26 +1,42 @@
 <div class="container">
   <div class="user-content">
-    <h2>Add a Plant</h2>
+    <div class='main'>
+      <div class='container-a'>
+        <h2>Add Plant</h2>
 
-    <%= form_for @plant do |f| %>
-      <%= f.label("Plant Name") %>
-      <br>
-      <%= f.text_field :name, placeholder: "name" %>
-      <br>
-      <%= f.label("Water Level") %>
-      <br>
-      <%= f.select :category, options_for_select(@categories), include_blank: true %>
-      <br>
-      <%= f.label("Size") %>
-      <br>
-      <%= f.select :size, options_for_select(@sizes), include_blank: true %>
-      <br>
-      <%= f.label("Condition") %>
-      <br>
-      <%= f.select :condition, options_for_select(@conditions), include_blank: true %>
-      <br>
-      <br>
-      <%= f.submit 'Add' %>
-    <% end %>
+        <%= form_for @plant do |f| %>
+          <%= f.label("Plant Name") %>
+          <br>
+          <%= f.text_field :name, placeholder: "name" %>
+          <br>
+          <%= f.label("Type") %>
+          <br>
+          <%= f.select :category, options_for_select(@categories), include_blank: true %>
+          <br>
+          <%= f.label("Size") %>
+          <br>
+          <%= f.select :size, options_for_select(@sizes), include_blank: true %>
+          <br>
+          <%= f.label("Condition") %>
+          <br>
+          <%= f.select :condition, options_for_select(@conditions), include_blank: true %>
+          <br>
+          <br>
+          <%= f.submit 'Add' %>
+        <% end %>
+      </div>
+      <div class="container-b">
+        <h2>Identify Plant Type:</h2>
+        <h4>Dry</h4>
+        <p>Info to identify</p>
+        <a href=''>Link to info</a>
+        <h4>Moderate</h4>
+        <p>Info to identify</p>
+        <a href=''>Link to info</a>
+        <h4>Wet</h4>
+        <p>Info to identify</p>
+        <a href=''>Link to info</a>
+      </div>
+    </div>
   </div>
 </div>
