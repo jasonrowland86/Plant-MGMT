@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
  */
 
+//Bootstrap template
 body, html {
   width: 100%;
   height: 100%;
@@ -19,7 +20,7 @@ body, h1, h2, h3, h4, h5, h6 {
   padding-bottom: 50px;
   text-align: center;
   color: #f8f8f8;
-  background: url(/images/houseplant2.jpg) no-repeat center center;
+  background: url(/images/houseplant3.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -156,4 +157,19 @@ p.copyright {
   position: relative;
   padding-top: 20%;
   padding-bottom: 20%;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-a {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.container-b {
+  margin: 20px;
 }
