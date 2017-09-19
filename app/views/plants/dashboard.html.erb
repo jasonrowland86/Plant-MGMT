@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="user-content">
+    <div class="main">
+      <div class="container-a">
+        <h2>Plants By Type</h2>
+        <div>
+          <%= link_to 'Dry Adapted', plants_dry_path %>
+          <%= @dryCount %>
+        </div>
+        <div>
+          <%= link_to 'Moderate', plants_moderate_path %>
+          <%= @moderateCount %>
+        </div>
+        <div>
+          <%= link_to 'Water Loving', plants_wet_path %>
+          <%= @wetCount %>
+        </div>
+        <br>
+        <%= link_to 'Add New Plant', new_plant_path %>
+      </div>
+      <div class="container-b">
+        Calendar
+      </div>
+    </div>
+  </div>
+</div>
