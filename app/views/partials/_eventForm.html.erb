@@ -1,0 +1,15 @@
+<%= form_for @event do |f| %>
+  <div class="feild">
+    <%= f.label :start_time %>
+    <%= f.datetime_select :start_time %>
+  </div>
+
+  <div class="feild">
+    <%= f.label :recurring %>
+    <%= f.select_recurring :recurring, nil, allow_blank: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
