@@ -11,7 +11,7 @@
                 <%= link_to "Logout", {:controller => :sessions, :action => 'destroy'}, :method => :delete, class: "nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to "Dashboard", {controller: "users", action: "index"}, class: "nav-link" %>
+                <%= link_to "Dashboard", {controller: "plants", action: "dashboard"}, class: "nav-link" %>
               </li>
               <li class="nav-item">
                 <%= link_to "Profile", {controller: "users", action: "index"}, class: "nav-link" %>
