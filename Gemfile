@@ -28,11 +28,14 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
+
+# Added Gems
 gem 'bcrypt', '~> 3.1.7'
-
 gem 'bootstrap', '~> 4.0.0.beta'
-
 gem 'jquery-rails'
+gem "simple_calendar", "~> 2.0"
+gem 'recurring_select', github: "RundownApp/recurring_select"
+gem 'ice_cube'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
