@@ -195,8 +195,9 @@ a {
 }
 
 a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: black;
+  text-decoration: none;
+  background-color: none;
 }
 
 a:not([href]):not([tabindex]) {
@@ -2606,6 +2607,7 @@ tbody.collapse.show {
   white-space: nowrap;
   background: none;
   border: 0;
+  float: right;
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
@@ -3187,6 +3189,7 @@ tbody.collapse.show {
 
 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
   border-color: #e9ecef #e9ecef #ddd;
+  background-color: none;
 }
 
 .nav-tabs .nav-link.disabled {
@@ -3215,7 +3218,8 @@ tbody.collapse.show {
 .nav-pills .nav-link.active,
 .show > .nav-pills .nav-link {
   color: #fff;
-  background-color: #007bff;
+  background-color: none;
+
 }
 
 .nav-fill .nav-item {
@@ -3323,6 +3327,7 @@ tbody.collapse.show {
 
 .navbar-toggler:focus, .navbar-toggler:hover {
   text-decoration: none;
+  color: white;
 }
 
 .navbar-toggler-icon {
