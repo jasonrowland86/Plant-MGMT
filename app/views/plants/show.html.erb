@@ -1,16 +1,19 @@
 <div class="container">
   <div class="user-content">
-    <div>
-      <h2><%= @plant.name %></h2>
+    <div class="main">
+      <%= render "partials/flashMessages" %>
+      <div>
+        <h2><%= @plant.name %></h2>
 
-      <p>Type: <%= stateType %></p>
-      <p>Size: <%= @plant.size %></p>
-      <p>Condition: <%= @plant.condition %></p>
+        <p>Type: <%= stateType %></p>
+        <p>Size: <%= @plant.size %></p>
+        <p>Condition: <%= @plant.condition %></p>
 
-      <br>
-      <%= link_to 'Delete Plant', plant_path(@plant), method: :delete %>
-      <br>
-      <%= link_to 'All Plants', plants_path %>
+        <br>
+        <%= link_to 'Delete Plant', plant_path(@plant), method: :delete %>
+        <br>
+        <%= link_to 'All Plants', plants_path %>
+      </div>
     </div>
   </div>
 </div>

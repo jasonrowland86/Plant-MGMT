@@ -4,7 +4,7 @@
       <div class="container-a">
         <h2>Plants By Type</h2>
         <div>
-          <%= link_to 'Dry Adapted', plants_dry_path %>
+          <%= link_to "Dry Adapted", {controller: "plants", action: "dry"}, id: "link" %>
           <%= @dryCount %>
         </div>
         <div>
