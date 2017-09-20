@@ -1,12 +1,16 @@
 class UsersController < ApplicationController
 
   def index
+    if current_user
     @user = User.find_by(username: current_user.username)
+    else
+      redirect_to root_path
+    end
   end
 
   def show
-    # @user = User.findby(params[:id])
-    @user = current_user
+    @user = User.findby(params[:id])
+    # @user = current_user
   end
 
   def new

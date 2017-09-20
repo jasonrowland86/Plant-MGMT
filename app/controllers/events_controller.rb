@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
-    @calendar_events = @events.map{ |e| e.calendar_events(params.fetch(:start_date, Time.zone.now).to_date)}
+    @calendar_events = @events.flat.map{ |e| e.calendar_events(params.fetch(:start_date, Time.zone.now).to_date)}
   end
 
   # GET /events/1
