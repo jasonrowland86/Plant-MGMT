@@ -51,3 +51,13 @@ A user will be able to create, update and delete.
 https://www.houseplant411.com/
 
 https://www.gbif.org/developer/species#nameUsages
+
+## Gems Used
+
+https://gorails.com/episodes/recurring-events
+
+https://github.com/seejohnrun/ice_cube
+
+https://github.com/GetJobber/recurring_select
+
+https://github.com/excid3/simple_calendar

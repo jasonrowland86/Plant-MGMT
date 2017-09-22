@@ -4,15 +4,14 @@
       <%= render "partials/flashMessages" %>
       <div>
         <h2><%= @plant.name %></h2>
-
-        <p>Type: <%= stateType %></p>
+        <p>Type: <%= state_type %></p>
         <p>Size: <%= @plant.size %></p>
         <p>Condition: <%= @plant.condition %></p>
 
         <br>
         <%= link_to 'Delete Plant', plant_path(@plant), method: :delete %>
         <br>
-        <%= link_to 'All Plants', plants_path %>
+        <%= link_to 'All Plants', plants_dashboard_path %>
       </div>
     </div>
   </div>

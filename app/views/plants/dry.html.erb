@@ -3,6 +3,7 @@
     <div class="main">
       <div>
         <h2>Dry Apapted Plants</h2>
+        <i class="fa fa-tint fa-2x" aria-hidden="true" id="water-drop"></i>
         <% if @plants.present? %>
           <% @plants.each do |plant| %>
             <div class="plant">
@@ -14,7 +15,7 @@
         <% end %>
         <%= link_to 'Add New Plant', new_plant_path %>
         <br>
-        <%= link_to 'Back', plants_path %>
+        <%= link_to 'Back', plants_dashboard_path %>
       </div>
     </div>
   </div>

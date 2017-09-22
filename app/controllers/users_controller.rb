@@ -9,8 +9,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.findby(params[:id])
+    # @user = User.findby(params[:id])
     # @user = current_user
+    @user = User.find_by(username: current_user.username)
   end
 
   def new
@@ -30,6 +31,10 @@ class UsersController < ApplicationController
       @user = User.new(username: create_params[:username])
       render :new
     end
+  end
+
+  def edit
+    @user = User.find_by(username: current_user.username)
   end
 
   private

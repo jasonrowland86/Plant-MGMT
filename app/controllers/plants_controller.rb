@@ -28,7 +28,7 @@ class PlantsController < ApplicationController
 
     if @plant.save
       flash[:notice] = 'Added Plant'
-      redirect_to users_path
+      redirect_to plants_dashboard_path
     else
       flash[:error] = @plant.errors.full_messages.join(', ')
       render :new
@@ -47,9 +47,9 @@ class PlantsController < ApplicationController
     @plants = plants.select { |plant| plant.category == 'Light' }
   end
 
-  def medium
+  def moderate
     plants = current_user.plants
-    @plants = plants.select { |plant| plant.category == 'Medium' }
+    @plants = plants.select { |plant| plant.category == 'Moderate' }
   end
 
   def wet
@@ -65,6 +65,9 @@ class PlantsController < ApplicationController
     @dryCount = dryPlants.count
     @moderateCount = moderatePlants.count
     @wetCount = wetPlants.count
+
+    @events = Event.all
+    @calendar_events = @events.map{ |e| e.calendar_events(params.fetch(:start_date, Time.zone.now).to_date)}
   end
 
   private

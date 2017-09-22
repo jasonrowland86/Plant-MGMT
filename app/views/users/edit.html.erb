@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="user-content">
+    <div class="main">
+      <h2>Update Account</h2>
+
+      <%= form_for @user do |f| %>
+        <%= f.text_field :username, placeholder: 'Username' %>
+        <br>
+        <%= f.password_field :password, placeholder: 'Password' %>
+        <br>
+        <%= f.text_field :name, placeholder: 'Name' %>
+        <br>
+        <%= f.text_field :email, placeholder: 'Email' %>
+        <br>
+        <%= f.text_field :phone_number, placeholder: 'Phone Number' %>
+        <br>
+
+        <%= f.submit 'Update' %>
+      <% end %>
+
+      <%= form_for :user, method: 'patch', url: {action: 'update'} do |f| %>
+        <%= label(:user, :name) %>
+        <%= f.text_field :name %><br>
+        <%= label(:user, :name) %>
+        <%= f.text_field :name %><br>
+        <%= label(:user, :password) %>
+        <%= f.text_field :password %><br>
+        <%= label(:user, :email) %>
+        <%= f.text_field :email %><br>
+        <%= label(:user, :phone_number) %>
+        <%= f.text_field :phone_number %><br>
+        <%= f.submit "Update" %>
+      <% end %>
+    </div>
+  </div>
+</div>

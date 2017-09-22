@@ -157,29 +157,30 @@ p.copyright {
 //My Content
 .user-content {
   position: relative;
-  padding-top: 20%;
-  padding-bottom: 20%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  height: 120vh;
 }
 
 .main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 75vh;
+  height: 80vh;
   background-color: #F6F7F9;
   border-top: 20px solid #737B85;
 }
 
 .container-a {
-  margin: 20px;
+  margin: 15px;
 }
 
 .container-b {
-  margin: 20px;
+  margin: 15px;
 }
 
 a.nav-link:hover {
-  background-color: #9EE8AC;
+  background-color: #58C99F;
 }
 
 .link:hover {
@@ -191,7 +192,7 @@ button.navbar-toggler {
 }
 
 #background {
-  background-color: #9EE8AC;
+  background-color: #58C99F;
 }
 
 span.network-name {
@@ -220,8 +221,89 @@ a#link:hover {
   margin-top: 5em;
 }
 
+#water-drop {
+  color: black;
+}
+
+.plants-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.a {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+.plant-types {
+  margin-top: 8vh;
+}
+
+.span {
+  font-weight: 300;
+}
+
+.user-edit {
+}
+
+.lead {
+  line-height: 1.2em;
+}
+
 // not working
 a {
   text-decoration: none;
   color: white;
+}
+
+.calendar-a {
+
+}
+
+.calendar-heading {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.events {
+  text-align: center;
+}
+.event-new {
+  text-align: center;
+  flex-direction: column;
+}
+//Simple Calendar
+
+td {
+  border: 1px solid black;
+}
+
+thead {
+  border: 1px solid black;
+}
+
+.simple-calendar {
+
+
+  .day {}
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {}
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {}
+  .next-month { }
+  .current-month {}
+
+  .has-events {}
 }

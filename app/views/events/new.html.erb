@@ -1,9 +1,13 @@
 <div class="container">
   <div class="user-content">
-    <h1>New Event</h1>
+    <div class="main event-new">
+      <h2>Add Watering Cycle</h2>
 
-    <%= render 'form', event: @event %>
 
-    <%= link_to 'Back', events_path %>
+      <%= render 'form', event: @event %>
+      <br>
+
+      <%= link_to 'Back', events_path %>
+    </div>
   </div>
 </div>

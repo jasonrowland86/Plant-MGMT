@@ -3,6 +3,9 @@
     <div class="main">
       <div>
         <h2>Moderate Plants</h2>
+        <i class="fa fa-tint fa-2x" aria-hidden="true" id="water-drop"></i>
+        <i class="fa fa-tint fa-2x" aria-hidden="true" id="water-drop"></i>
+      </div>
         <% if @plants.present? %>
           <% @plants.each do |plant| %>
             <div class="plant">
@@ -15,7 +18,7 @@
         <br>
         <%= link_to 'Add New Plant', new_plant_path %>
         <br>
-        <%= link_to 'Back', plants_path %>
+        <%= link_to 'Back', plants_dashboard_path %>
       </div>
     </div>
   </div>

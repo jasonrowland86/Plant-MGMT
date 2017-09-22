@@ -1,25 +1,49 @@
 <div class="container">
   <div class="user-content">
     <div class="main">
-      <div class="container-a">
-        <h2>Plants By Type</h2>
-        <div>
-          <%= link_to "Dry Adapted", {controller: "plants", action: "dry"}, id: "link" %>
-          <%= @dryCount %>
+      <div class="container-a a">
+        <h2>Plants</h2>
+        <div class="plant-types">
+          <div>
+            <%= link_to "Dry Adapted", {controller: "plants", action: "dry"}, id: "link" %>
+            <%= @dryCount %>
+            <i class="fa fa-tint" aria-hidden="true" id="water-drop"></i>
+          </div>
+          <div>
+            <%= link_to 'Moderate', plants_moderate_path %>
+            <%= @moderateCount %>
+            <i class="fa fa-tint" aria-hidden="true" id="water-drop"></i>
+            <i class="fa fa-tint" aria-hidden="true" id="water-drop"></i>
+          </div>
+          <div>
+            <%= link_to 'Water Loving', plants_wet_path %>
+            <%= @wetCount %>
+            <i class="fa fa-tint" aria-hidden="true" id="water-drop"></i>
+            <i class="fa fa-tint" aria-hidden="true" id="water-drop"></i>
+            <i class="fa fa-tint" aria-hidden="true" id="water-drop"></i>
+          </div>
+          <br>
+          <%= link_to 'Add New Plant', new_plant_path %>
         </div>
-        <div>
-          <%= link_to 'Moderate', plants_moderate_path %>
-          <%= @moderateCount %>
-        </div>
-        <div>
-          <%= link_to 'Water Loving', plants_wet_path %>
-          <%= @wetCount %>
-        </div>
-        <br>
-        <%= link_to 'Add New Plant', new_plant_path %>
       </div>
       <div class="container-b">
-        Calendar
+          <div class="event-new">
+            <h2>Watering Schedule</h2>
+          </div>
+          <br>
+          <%= month_calendar events: @calendar_events do |day, events| %>
+          <div><strong><%= day.to_s(:short) %></strong></div>
+            <% events.each do |event| %>
+              <div>
+                <%= link_to event.name, event_path(event.id, time: event.start_time) %>
+              </div>
+            <% end %>
+          <% end %>
+          <br>
+          <div class="event-new">
+            <%= link_to "New Event", {controller: "events", action: "new"}, class: "event-new" %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
