@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def index
     if current_user
-      redirect_to users_path
+      redirect_to plants_dashboard_path
     end
   end
 
@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
     if user
       sign_in(user)
       flash[:notice] = 'Signed in'
-      redirect_to users_path
+      redirect_to plants_dashboard_path
     else
       flash[:error] = 'Username or password incorrect'
       @user = User.new(username: username)

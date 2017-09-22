@@ -166,7 +166,7 @@ p.copyright {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 80vh;
+  height: 100vh;
   background-color: #F6F7F9;
   border-top: 20px solid #737B85;
 }
@@ -223,6 +223,7 @@ a#link:hover {
 
 #water-drop {
   color: black;
+  margin-left: 5px;
 }
 
 .plants-title {
@@ -237,6 +238,42 @@ a#link:hover {
 
 .plant-types {
   margin-top: 8vh;
+}
+
+.main.type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.info-page {
+  overflow: scroll;
+  margin-top: 10vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.container-b.new {
+  overflow: scroll;
+  margin-top: 50px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.container-a.new {
+  margin-top: 50px;
+}
+
+.container-b.new {
+  width: 50vw;
 }
 
 .span {

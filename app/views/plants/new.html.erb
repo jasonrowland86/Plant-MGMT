@@ -1,10 +1,9 @@
 <div class="container">
   <div class="user-content">
     <%= render "partials/flashMessages" %>
-    <div class='main'>
-      <div class='container-a'>
+    <div class='main new'>
+      <div class='container-a new'>
         <h2>Add Plant</h2>
-
         <%= form_for @plant do |f| %>
           <%= f.label("Plant Name") %>
           <br>
@@ -26,16 +25,35 @@
           <%= f.submit 'Add' %>
         <% end %>
       </div>
-      <div class="container-b">
+      <div class="container-b new">
         <h2>Identify Plant Type:</h2>
         <h4>Dry</h4>
-        <p>Info to identify</p>
+        <h5>Check every 1-2 Weeks</h5>
+        <p>It is important that plants of this type are allowed to dry out between waterings.
+        They are highly prone to root rot because they are form arid habitats. Be sure
+        the soil dries to the bottom of the pot before watering again.
+        <br>
+        Common plants of this type include cacti and succulents.</p>
         <a href=''>Link to info</a>
+        <br>
+        <br>
         <h4>Moderate</h4>
-        <p>Info to identify</p>
+        <h5>Check every 4-7 Days</h5>
+        <p>These plants generally want to be moist but not saturated. It is best to
+        let the top 1-2 inches dry out completely before watering again.
+        <br>
+        Common house plants of this type are most Ficuses, Dragon Trees, Rubber plants,
+        philodendron trees, and spider plants.</p>
         <a href=''>Link to info</a>
+        <br>
+        <br>
         <h4>Wet</h4>
-        <p>Info to identify</p>
+        <h5>Check every 2-3 Days</h5>
+        <p>These plants prefer not to dry out ever. Keep an eye on them and always
+        keep them on the moist side.
+        <br>
+        Some plants of this tyoe are Bog carnivorous plants, maidenhair ferns, corkscrew rush,
+        and zebra plants.</p>
         <a href=''>Link to info</a>
       </div>
     </div>
