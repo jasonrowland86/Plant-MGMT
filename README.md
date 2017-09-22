@@ -13,14 +13,6 @@ In the future this app could be expanded to:
 
 - Include a feature for users to list plants in your neighborhood to sell, trade, or give away.
 
-## Wireframes
-
-![img_0949](https://user-images.githubusercontent.com/27818966/30357359-3bc23ad0-980c-11e7-9461-e5563c4ce868.jpg)
-![img_0950](https://user-images.githubusercontent.com/27818966/30357356-3bc10f48-980c-11e7-8c6c-eef616f315cd.jpg)
-![img_0951](https://user-images.githubusercontent.com/27818966/30357358-3bc1909e-980c-11e7-8a5b-e4b86376f2ae.jpg)
-![img_0952](https://user-images.githubusercontent.com/27818966/30357357-3bc11e34-980c-11e7-9963-81c373497364.jpg)
-![img_0953](https://user-images.githubusercontent.com/27818966/30357880-1ecaed2a-980f-11e7-87f9-b96bb55021c1.JPG)
-
 
 ## App structure
 
